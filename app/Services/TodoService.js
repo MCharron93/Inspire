@@ -27,7 +27,7 @@ class TodoService {
     // } else {
     //   return todo.completed = false
     // }
-    console.log(todo.completed)
+    // console.log(todo.completed)
     let res = await api.put(url + todoId, todo)
     this.getTodos()
   }

@@ -10,5 +10,21 @@ export default class Weather {
 
     this.city = data.name
     this.kelvin = data.main.temp
+    this.visibility = data.weather[0].main
+
+    if (this.kelvin > 105) {
+      this.kelvin = Math.floor(1.8 * (this.kelvin - 273) + 32)
+    }
+
+  }
+
+
+  get Template() {
+    return /*html */`
+    <h4>${this.city}</h4>
+    <h4>${this.kelvin}</h4>
+    <h4>${this.visibility}</h4>
+
+    `
   }
 }
