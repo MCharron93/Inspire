@@ -10,7 +10,7 @@ function _drawBackground() {
 export default class ImageController {
   constructor() {
     // console.log("Controller Connected");
-    this.getImage()
+    // this.getImage()
     ProxyState.on("background", _drawBackground)
   }
 

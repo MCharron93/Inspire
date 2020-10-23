@@ -4,9 +4,8 @@ import { api } from "./AxiosService.js";
 //TODO create methods to retrieve data and save to the State
 class ImageService {
   constructor() {
-    debugger
     // console.log("Image Service");
-    // this.getImage()
+    this.getImage()
   }
 
   async getImage() {
