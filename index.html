@@ -12,9 +12,20 @@
 <body>
     <main class="container-fluid">
         <div id="app">
-            <div class="row" id="todo-list">
-                To do list goes here
+
+
+            <div class="row">
+                <form class="col-8" onsubmit="app.todoController.addTodo(event)">
+                    <input type="text" class="form-control" name="description" id="description"
+                        placeholder="Create a todo">
+                    <button type="submit" class="btn btn-info">Add todo</button>
+                </form>
             </div>
+            <div class="row">
+                <div class="col-6" id="todo-list"></div>
+            </div>
+
+
             <div class="row" id="weather">
                 Weather goes here
             </div>
@@ -24,7 +35,7 @@
             <div class="row" id="quote">
                 Quote goes here
             </div>
-            <div class="row" id="bonus-clock">
+            <div class="row" id="bonus-clock">Optional Clock
 
             </div>
         </div>
