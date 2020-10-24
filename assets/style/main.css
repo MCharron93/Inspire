@@ -42,6 +42,11 @@
   box-sizing: border-box;
 }
 
+.jumbotron{
+  background: rgba(204, 204, 204, 0.5);
+  opacity: 0.60;
+}
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
