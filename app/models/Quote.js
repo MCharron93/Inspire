@@ -13,7 +13,17 @@ export default class Quote {
 
   get Author() {
     return /*html*/`
-    <div className="col-10" id="revert">${this.author}</div>
+    <div className="col-10" id="leave">${this.author}</div>
     `
+
+    // if (this.body) {
+    //   return /*html*/`
+    // <div className="col-10" id="revert">${this.author}</div>
+    // `
+    // } else {
+    //   return /*html*/`
+    // <div className="col-10" id="hover">${this.body}</div>
+    // `
+    // }
   }
 }

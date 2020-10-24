@@ -5,11 +5,8 @@ import quoteService from "../Services/QuoteService.js"
 function _drawQuote() {
   let quote = ProxyState.quote
   document.getElementById("quote").innerHTML = quote.Template
-  document.getElementById("hover").onmouseover = function () { _mouseOver() }
-  document.getElementById("revert").onmouseout = function () {
-    _mouseOut()
-  }
 }
+
 
 function _mouseOver() {
   let quote = ProxyState.quote
@@ -18,7 +15,7 @@ function _mouseOver() {
 
 function _mouseOut() {
   let quote = ProxyState.quote
-  document.getElementById("revert").innerHTML = quote.Template
+  document.getElementById("leave").innerHTML = quote.Template
 }
 export default class QuoteController {
   constructor() {
