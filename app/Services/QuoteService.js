@@ -13,7 +13,7 @@ class QuoteService {
     let res = await api.get("quotes")
     ProxyState.quote = new Quote(res.data.quote)
 
-    console.log(ProxyState.quote);
+    // console.log(ProxyState.quote);
   }
 }
 
