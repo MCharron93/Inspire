@@ -18,9 +18,11 @@ export default class Weather {
 
   get Template() {
     return /*html */`
+    <div class="col-4 text-right">
     <h4>${this.city}</h4>
-    <h4>${this.kelvin} F</h4>
+    <h4>${this.kelvin}&#176; F</h4>
     <h4>${this.visibility}</h4>
+    </div>
 
     `
   }

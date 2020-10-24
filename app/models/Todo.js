@@ -9,15 +9,16 @@ export default class Todo {
     return /*html*/`
     <div class="col-4 p-2">
     <h3>${this.description}</h3>
+    <div>
     ${this.ToggledButton}
-    <button class="btn btn-warning" onclick="app.todoController.removeTodo('${this.id}')">&times</button>
+    <button class="btn btn-warning btn-sm" onclick="app.todoController.removeTodo('${this.id}')">&times</button></div>
 </div>
     `
   }
 
   get ToggledButton() {
-    let checkButton = `<button class="btn btn-success" onclick="app.todoController.toggleTodoStatus('${this.id}')">Done</button>`
-    let doneButton = `<button class="btn btn-warning" onclick="app.todoController.toggleTodoStatus('${this.id}')">Undo</button>`
+    let checkButton = `</div><button class="btn btn-success btn-sm" onclick="app.todoController.toggleTodoStatus('${this.id}')">&#10003</button>`
+    let doneButton = `<button class="btn btn-warning btn-sm" onclick="app.todoController.toggleTodoStatus('${this.id}')">Undo</button>`
     if (this.completed) {
       return doneButton
     } else {

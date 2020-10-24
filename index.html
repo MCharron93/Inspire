@@ -12,36 +12,37 @@
 <body>
     <main class="container-fluid text-light" id="background">
         <div id="app">
-
-            <!-- <div class="row" id="background">
-                Background image here
-            </div> -->
-
-            <div class="row">
-                <form class="col-8" onsubmit="app.todoController.addTodo(event)">
-                    <input type="text" class="form-control" name="description" id="description"
-                        placeholder="Create a todo">
-                    <button type="submit" class="btn btn-info">Add todo</button>
-                </form>
-            </div>
-            <div class="row">
-                <div class="col-6" id="todo-list"></div>
-            </div>
-
-
-            <div class="row" id="weather">
+            <div class="row justify-content-end" id="weather">
 
             </div>
+            <div class="row justify-content-center text-center">
+                <div class="jumbotron col-10">
+                    <h1 class="display-4">Hello, Michelle!</h1>
+                    <p class="lead" id="quote"></p>
+                    <br>
+                    <div class="row">
+                        <form class="col d-flex" onsubmit="app.todoController.addTodo(event)">
+                            <input type="text" class="form-control form-control-sm" name="description" id="description"
+                                placeholder="Create a task">
+                            <button type="submit" class="btn btn-info btn-sm">&#43</button>
+                        </form>
+                    </div>
+                    <div class="row" id="todo-list">
+                        < </div>
+                    </div>
+                </div>
 
 
 
-            <div class="row" id="quote">
-                Quote goes here
+
+
+                <div class="row">
+
+                </div>
+                <div class="row" id="bonus-clock">Optional Clock
+
+                </div>
             </div>
-            <div class="row" id="bonus-clock">Optional Clock
-
-            </div>
-        </div>
     </main>
     <footer class="container-fluid bg-transparent text-light">
         <div class="row text-center">
