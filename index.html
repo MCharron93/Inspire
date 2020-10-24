@@ -20,22 +20,28 @@
                     <h1 class="display-4">Hello, Michelle!</h1>
                     <p class="lead" id="quote"></p>
                     <br>
-                    <div class="row">
-                        <form class="col d-flex" onsubmit="app.todoController.addTodo(event)">
+                    <div class="row justify-content-around">
+                        <form class="col d-flex " onsubmit="app.todoController.addTodo(event)">
                             <input type="text" class="form-control form-control-sm" name="description" id="description"
                                 placeholder="Create a task">
-                            <button type="submit" class="btn btn-info btn-sm">&#43</button>
                         </form>
+                        <button type="submit" class="btn btn-info btn-sm">&#43</button>
                     </div>
+                    <div class="row justify-content-around p-4">
+                        <h5>Tasks:</h5>
+                        <p id="todo-count">
+                        </p>
+                    </div>
+                    <hr>
                     <div class="row" id="todo-list">
-                        < </div>
                     </div>
-                </div>
-
-                <div class="row" id="bonus-clock">Optional Clock
-
                 </div>
             </div>
+
+            <div class="row" id="bonus-clock">Optional Clock
+
+            </div>
+        </div>
     </main>
     <footer class="container-fluid bg-transparent text-light">
         <div class="row text-center">

@@ -6,14 +6,15 @@ function _drawTodos() {
   // NOTE this should render the todo display w/ tasks listed
   let template = ""
   let list = ProxyState.todos
+  let count = ProxyState.todos.length
   list.forEach(l => template += l.Template)
   document.getElementById("todo-list").innerHTML = template
+  document.getElementById("todo-count").innerText = count.toString()
 }
-
 export default class TodoController {
   constructor() {
     //TODO Remember to register your subscribers
-    todoService.getTodos()
+    // todoService.getTodos()
     ProxyState.on("todos", _drawTodos)
     _drawTodos()
   }
