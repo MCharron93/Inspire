@@ -17,8 +17,8 @@ export default class Todo {
   }
 
   get ToggledText() {
-    let description = `<h3>${this.description}</h3>`
-    let striked = `<h3><s>${this.description}</s></h3>`
+    let description = `<h4>${this.description}</h4>`
+    let striked = `<h4><s>${this.description}</s></h4>`
     if (this.completed) {
       return striked
     } else {
