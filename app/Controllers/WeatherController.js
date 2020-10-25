@@ -24,4 +24,8 @@ export default class WeatherController {
       console.error(e)
     }
   }
+
+  toggleCelsius() {
+
+  }
 }

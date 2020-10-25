@@ -20,10 +20,14 @@ export default class Weather {
     return /*html */`
     <div class="col-4 text-right">
     <h4>${this.city}</h4>
-    <h4>${this.kelvin}&#176; F</h4>
+    <h4 onclick="app.weatherController.toggleCelsius()">${this.kelvin}&#176; F</h4>
     <h4>${this.visibility}</h4>
     </div>
-
     `
+  }
+
+  get Celsius() {
+    let fahrenheit = Math.floor(1.8 * (this.kelvin - 273) + 32)
+    let celsius = Math.floor(this.kelvin - 273.15)
   }
 }
