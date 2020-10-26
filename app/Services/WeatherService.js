@@ -3,6 +3,9 @@ import Weather from "../Models/Weather.js";
 import { api } from "./AxiosService.js";
 
 class WeatherService {
+  // toggleTemp() {
+
+  // }
 
   async getWeather() {
     // console.log("Calling the Weatherman");

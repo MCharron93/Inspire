@@ -5,14 +5,14 @@ import weatherService from "../Services/WeatherService.js";
 //		you may wish to check out the model and include some additional data.
 
 //TODO Complete rendering data to the screen
-function drawWeather() {
+function _drawWeather() {
   // console.log("THE WEATHER MAN SAYS:", ProxyState.weather)
   let weather = ProxyState.weather
   document.getElementById("weather").innerHTML = weather.Template
 }
 export default class WeatherController {
   constructor() {
-    ProxyState.on("weather", drawWeather);
+    ProxyState.on("weather", _drawWeather);
     this.getWeather()
   }
 
@@ -25,7 +25,7 @@ export default class WeatherController {
     }
   }
 
-  toggleCelsius() {
-
-  }
+  // toggleTemp() {
+  //   weatherService.toggleTemp()
+  // }
 }

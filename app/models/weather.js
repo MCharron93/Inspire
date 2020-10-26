@@ -9,10 +9,11 @@ export default class Weather {
     this.kelvin = data.main.temp
     this.visibility = data.weather[0].main
 
-    if (this.kelvin > 105) {
-      this.kelvin = Math.floor(1.8 * (this.kelvin - 273) + 32)
+    if (this.kelvin > 200) {
+      let fahrenheit = Math.floor(1.8 * (this.kelvin - 273) + 32)
+      this.kelvin = fahrenheit
     }
-
+    return this.kelvin
   }
 
 
@@ -20,14 +21,19 @@ export default class Weather {
     return /*html */`
     <div class="col-4 text-right">
     <h4>${this.city}</h4>
-    <h4 onclick="app.weatherController.toggleCelsius()">${this.kelvin}&#176; F</h4>
+    <h4>${this.kelvin}&#176; F</h4>
     <h4>${this.visibility}</h4>
     </div>
     `
   }
 
-  get Celsius() {
-    let fahrenheit = Math.floor(1.8 * (this.kelvin - 273) + 32)
-    let celsius = Math.floor(this.kelvin - 273.15)
-  }
+  // ${this.Toggle}
+  // get Toggle() {
+  //   if (this.kelvin > 50) {
+  //     let celsius = Math.floor(0.555556 * (this.kelvin - 32))
+  //     return /*html*/ `<h4 id="temp" onclick="app.weatherController.toggleTemp()">${celsius}&#176; C</h4>`
+  //   } else {
+  //     return /*html*/ `<h4 id="temp" onclick="app.weatherController.toggleTemp()">${this.kelvin}&#176; F</h4>`
+  //   }
+  // }
 }
