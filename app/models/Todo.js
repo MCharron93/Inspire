@@ -29,7 +29,6 @@ export default class Todo {
     let checkButton = `</div><button class="btn btn-success btn-sm" onclick="app.todoController.toggleTodoStatus('${this.id}')">&#10003</button>`
     let doneButton = `<button class="btn btn-warning btn-sm" onclick="app.todoController.toggleTodoStatus('${this.id}')"><i class="fas fa-undo"></i></button>`
     if (this.completed) {
-
       return doneButton
     } else {
       return checkButton
