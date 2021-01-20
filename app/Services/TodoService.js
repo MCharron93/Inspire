@@ -14,7 +14,6 @@ class TodoService {
     let res = await api.get("michelle/todos")
     // console.log(res.data)
     // let todoCount = ProxyState.todos.length
-    debugger
     let todos = res.data.map(rawTodoData => new Todo(rawTodoData))
     ProxyState.todos = todos
   }
