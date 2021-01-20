@@ -74,6 +74,9 @@ html {
 .bi-arrow-counterclockwise{
   color: #FF7F50;
 }
+.col-4{
+  height: fit-content;
+}
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;

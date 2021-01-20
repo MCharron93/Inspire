@@ -28,7 +28,7 @@ export default class Todo {
   get ToggledButton() {
     let checkButton = `</div>
     <i class="bi bi-check2-circle" onclick="app.todoController.toggleTodoStatus('${this.id}')"></i>`
-    let doneButton = `<i class="bi bi-arrow-counterclockwise" onclick="app.todoController.toggleTodoStatus('${this.id}')"></i>`
+    let doneButton = `</div><i class="bi bi-arrow-counterclockwise" onclick="app.todoController.toggleTodoStatus('${this.id}')"></i>`
     if (this.completed) {
       return doneButton
     } else {
