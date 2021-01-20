@@ -12,9 +12,11 @@ class TodoService {
   }
   async getTodos() {
     let res = await api.get("michelle/todos")
-    // console.log(res.data.data)
+    // console.log(res.data)
     // let todoCount = ProxyState.todos.length
-    ProxyState.todos = res.data.data.map(rawTodoData => new Todo(rawTodoData))
+    debugger
+    let todos = res.data.map(rawTodoData => new Todo(rawTodoData))
+    ProxyState.todos = todos
   }
   async addTodo(todo) {
     let res = await api.post("michelle/todos", todo)
