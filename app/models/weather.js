@@ -19,7 +19,7 @@ export default class Weather {
 
   get Template() {
     return /*html */`
-    <div class="col-4 text-right">
+    <div class="row text-right d-flex justify-content-around">
     <h4>${this.city}</h4>
     <h4>${this.kelvin}&#176; F</h4>
     <h4>${this.visibility}</h4>

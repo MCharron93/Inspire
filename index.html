@@ -6,14 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <title>Inspire</title>
 </head>
 
-<body>
+<body onload="showTime()">
     <main class="container-fluid text-light" id="background">
         <div id="app">
-            <div class="row justify-content-end" id="weather" class="">
-
+            <div class="row justify-content-around mb-3">
+                <div class="col-6 digital-clock" id="clock">
+                </div>
+                <div class="col-6" id="weather" class="">
+                </div>
             </div>
             <div class="row justify-content-center text-center text-dark">
                 <div class="jumbotron col-10">
@@ -25,7 +29,8 @@
                             <input type="text" class="form-control form-control-sm" name="description" id="description"
                                 placeholder="Create a task">
                         </form>
-                        <button type="submit" class="btn btn-info btn-sm">&#43</button>
+                        <i type="submit" class="fa fa-plus-circle align-self-center" aria-hidden="true"></i>
+                        <!-- <button type="submit" class="btn btn-info btn-sm">&#43</button> -->
                     </div>
                     <div class="row justify-content-center p-4">
                         <h5>Tasks:</h5>&nbsp;&nbsp;
@@ -33,14 +38,11 @@
                         </p>
                     </div>
                     <hr>
-                    <div class="row" id="todo-list">
+                    <div class="row text-center" id="todo-list">
                     </div>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="digital-clock" id="clock"></div>
-            </div>
         </div>
     </main>
     <footer class="container-fluid bg-transparent text-light">
@@ -53,6 +55,32 @@
     <script src="https://kit.fontawesome.com/9d76fee42e.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="app/main.js" type="module"></script>
+    <script>
+        function showTime() {
+            let date = new Date()
+            let h = date.getHours()
+            let m = date.getMinutes()
+            let s = date.getSeconds()
+            let session = "AM"
+
+            if (h == 0) {
+                h = 12
+            }
+            if (h > 12) {
+                h = h - 12
+                session = "PM"
+            }
+
+            h = (h < 10) ? "0" + h : h
+            m = (m < 10) ? "0" + m : m
+            s = (s < 10) ? "0" + s : s
+
+            let time = h + ":" + m + ":" + s + " " + session
+            document.getElementById('clock').innerText = time
+            document.getElementById('clock').textContent = time
+            setTimeout(showTime, 1000)
+        }
+    </script>
 </body>
 
 </html>
